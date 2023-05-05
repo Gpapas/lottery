@@ -24,8 +24,23 @@ function App() {
         alert('Please install MetaMask to interact with this dApp.');
       }
     };
+  useEffect(() => {
     initWeb3();
   }, []);
+    
+const connectWallet = async () => {
+    if (window.ethereum) {
+      try {
+        await window.ethereum.request({ method: 'eth_requestAccounts' });
+        const accounts = await web3.eth.getAccounts();
+        setAccounts(accounts);
+      } catch (error) {
+        console.error('Error connecting wallet:', error);
+      }
+    } else {
+      alert('Please install MetaMask to interact with this dApp.');
+    }
+  };
 
   const enterLottery = async () => {
     if (!web3 || !accounts || accounts.length === 0) {
@@ -47,8 +62,14 @@ function App() {
   return (
     <div className="App">
       <h1>Lottery dApp</h1>
-      <button onClick={enterLottery}>Enter Lottery</button>
-      <button onClick={pickWinner}>Pick Winner</button>
+      {accounts.length === 0 ? (
+        <button onClick={connectWallet}>Connect Wallet</button>
+      ) : (
+        <>
+          <button onClick={enterLottery}>Enter Lottery</button>
+          <button onClick={pickWinner}>Pick Winner</button>
+        </>
+      )}
     </div>
   );
 }

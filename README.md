@@ -9,9 +9,6 @@ This repository serves as our submission for the Cadena Certification. Our team 
 
 The primary purpose of this repository is to submit our project for the Cadena Certification.
 
-check it out:
-https://master--super-sopapillas-9b35ae.netlify.app/
-
 
 ## Team Members
 

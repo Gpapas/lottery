@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.19+commit.7dd6d404"
+		"version": "0.8.21+commit.d9974bed"
 	},
 	"language": "Solidity",
 	"output": {
@@ -9,13 +9,6 @@
 				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
-			},
-			{
-				"inputs": [],
-				"name": "enter",
-				"outputs": [],
-				"stateMutability": "payable",
-				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -32,89 +25,12 @@
 			},
 			{
 				"inputs": [],
-				"name": "getBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getPlayers",
+				"name": "getUsers",
 				"outputs": [
 					{
 						"internalType": "address payable[]",
 						"name": "",
 						"type": "address[]"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getRandomNumber",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "lottery",
-						"type": "uint256"
-					}
-				],
-				"name": "getWinnerByLottery",
-				"outputs": [
-					{
-						"internalType": "address payable",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "lotteryHistory",
-				"outputs": [
-					{
-						"internalType": "address payable",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "lotteryId",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -134,13 +50,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "pickWinner",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -148,7 +57,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "players",
+				"name": "recipient",
 				"outputs": [
 					{
 						"internalType": "address payable",
@@ -157,6 +66,13 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sendPayment",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -173,9 +89,9 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/random_lotary_fee_wcomments.sol": "Lottery"
+			"contracts/test_payment.sol": "PaymentContract"
 		},
-		"evmVersion": "paris",
+		"evmVersion": "shanghai",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -187,11 +103,11 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/random_lotary_fee_wcomments.sol": {
-			"keccak256": "0x571ff041c3f2128a16d83af834decd1e6a8ea448c0b341b87722b26a1f35e5fe",
+		"contracts/test_payment.sol": {
+			"keccak256": "0xe851b8a832433ebe7e69bc077cbc0c19d1249aa556e4da8d49450de8f8116f37",
 			"urls": [
-				"bzz-raw://cba1572f51e75ed8150b92a1d40e3bc7074dd79113f0809f2a2e0b991c10322a",
-				"dweb:/ipfs/QmcApKv9de322PNkTzuP19rmYL7Z7M78wPxXqkv6kPjAtP"
+				"bzz-raw://48f15f0eb069cf5a4972f81ba6b6bec4851c3bdf8187351a2617ddc1314c72e0",
+				"dweb:/ipfs/QmaXWHhSBs21WzPWpStNCrryRHYTHJSpuFozJz441jdZjS"
 			]
 		}
 	},
